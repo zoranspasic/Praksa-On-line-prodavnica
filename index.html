@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <title>Online prodavnica</title>
+
+</head>
+
+<body id="pocetna">
+
+    <!-- NAV, stil: "responsive bootstrap navbar"-->
+    <nav class="navbar navbar-light navbar-expand-md fixed-top">
+
+        <!-- Toggler - collapsible button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" title="navigacija">
+            <span class="fa fa-navicon" style="color: beige; font-size: 25px;"></span>
+        </button>
+
+        <!-- NAV linkovi -->
+        <div id="navbar" class="navbar-collapse collapse">
+
+            <ul class="navbar-nav mr-auto">
+
+                <li class="prijava nav-item mr-5">
+                    <a class="btn btn-outline-info fa fa-sign-in" href="#prijava"> Prijava</a>
+                </li>
+
+                <li class="registracija nav-item mr-5">
+                    <a class="btn btn-outline-info fa fa-user" href="#registracija"> Registracija</a>
+                </li>
+
+                <li class="artikli nav-item mr-5">
+                    <a class="btn btn-outline-info fa fa-user" href="#artikli"> Unos novih artikala</a>
+                </li>
+
+                <li class="akcija nav-item mr-5">
+                    <a class="btn btn-outline-info fa fa-user" href="#akcija"> Nova akcija</a>
+                </li>
+            </ul>
+
+            <ul class="navbar-nav">
+                <li class="odjava nav-item mr-5">
+                    <a class="btn btn-outline-info fa fa-sign-out" href="#odjava"> Odjava</a>
+                </li>
+            </ul>
+
+            <ul class="navbar-nav">
+                <li>
+                    <p class="u-name btn-outline-default fa fa-user"> <i> Prijavljeni ste kao: <b><span
+                                    id="uname"></span></b></i></p>
+                </li>
+            </ul>
+        </div>
+
+    </nav>
+
+    <!-- DIV dobrodoslice na sajt -->
+    <div id="dobrodosli" class="container col-sm-5">
+        <h5>Dobro došli</h5>
+        <hr>
+        <ul style="list-style-type: none">
+            <li>Dobro došli u ON-LINE prodavnicu.</li>
+            <p></p>
+            <li>Molimo da se prijavite.</li>
+            <hr>
+        </ul>
+    </div>
+    <!-- END of DOBRODOSLICE -->
+
+    <!-- DIV formulara za PRIJAVU -->
+    <div id="prijava" class="container col-sm-5">
+        <h5>Prijava</h5>
+        <hr>
+        <form name="prijava" action="" method="">
+
+            <div class="input-group mb-1">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Korisničko ime:</span>
+                </div>
+                <input class="form-control" type="text" name="username" id="username" required>
+            </div>
+
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Lozinka:</span>
+                </div>
+                <input class="form-control" type="password" name="pass" id="pass" required></textarea>
+            </div>
+            <hr>
+
+            <input id="prijavi" name="btn-prijavi" type="submit" class="btn btn-outline-info btn-prijava"
+                style="width:100px" value="Prijavi me" />
+
+            <input id="obrisi" name="btn-obrisi" type="reset" class="btn btn-outline-info" style="width:70px"
+                value="Obriši" />
+
+        </form>
+    </div>
+    <!-- END of PRIJAVA -->
+
+    <!-- DIV formulara za REGISTRACIJU -->
+    <div id="registracija" class="container col-sm-5 text-left">
+        <h5>Registracija</h5>
+        <hr>
+        <form name="registracija" action="" method="POST">
+
+            <div class="input-group mb-1">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Ime:</span>
+                </div>
+                <input class="form-control" type="text" name="ime" id="ime" required>
+            </div>
+
+            <div class="input-group mb-1">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Prezime:</span>
+                </div>
+                <input class="form-control" type="text" name="prezime" id="prezime" required>
+            </div>
+
+            <div class="input-group mb-1">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Email:</span>
+                </div>
+                <input class="form-control" type="email" name="email" id="email" required>
+            </div>
+            <hr>
+
+            <div class="input-group mb-1">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Korisničko ime:</span>
+                </div>
+                <input class="form-control" type="text" name="username" id="username" required>
+            </div>
+
+            <div class="input-group mb-1">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Lozinka:</span>
+                </div>
+                <input class="form-control" type="password" name="password" id="password" required></textarea>
+            </div>
+
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Ponovite lozinku:</span>
+                </div>
+                <input class="form-control" type="password" name="repassword" id="repassword" required></textarea>
+            </div>
+            <hr>
+            <input id="registruj" type="submit" class="btn btn-outline-info" style="width:120px" value="Registruj me" />
+
+            <input id="obrisi" type="reset" class="btn btn-outline-info" style="width:70px" value="Obriši" />
+
+        </form>
+    </div>
+    <!-- END of REGISTRACIJA-->
+
+    <!-- DIV za ZABORAVLJENU lozinku -->
+    <div id="zaboravljena" class="container col-sm-5 text-left">
+        <h5>Zaboravljena lozinka</h5>
+        <hr>
+
+        <form name="zaboravljena" action="" method="POST">
+
+            <div class="input-group mb-1">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Ime:</span>
+                </div>
+                <input class="form-control" type="text" name="ime" id="ime" required>
+            </div>
+
+            <div class="input-group mb-1">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Prezme:</span>
+                </div>
+                <input class="form-control" type="text" name="prezime" id="prezime" required>
+            </div>
+            <hr>
+
+            <div class="input-group mb-1">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Korisničko ime:</span>
+                </div>
+                <input class="form-control" type="text" name="username" id="username" required>
+            </div>
+
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Email:</span>
+                </div>
+                <input class="form-control" type="email" name="email" id="email" required>
+            </div>
+            <hr>
+            <input id="posalji" type="submit" class="btn btn-outline-info" style="width:70px" value="Pošalji" />
+
+            <input id="obrisi" type="reset" class="btn btn-outline-info" style="width:70px" value="Obriši" />
+
+        </form>
+    </div>
+    <!-- END of ZABORAVLJENA-->
+
+    <!-- DIV za ODJAVU sa sajta -->
+    <div id="odjava" class="container col-sm-5">
+        <h5>Do viđenja</h5>
+        <hr>
+        <ul style="list-style-type: none">
+            <li>Uspešno ste se odjavili iz ON-LINE prodavnice.</li>
+            <li>Hvala što ste koristili naš softver !</li>
+        </ul>
+        <hr>
+        <!-- <p>Vaš <img src="img/projekatx.png" alt="projekatX"> tim !</p> -->
+    </div>
+    <!-- END of ODJAVA-->
+
+    <!-- Formular ARTIKLI -->
+
+    <div id="artikli" class="container col-sm-4 text-left">
+        <h5>Podaci o artiklu</h5>
+        <hr>
+        <form name="artikli" action="" method="">
+
+            <div class="input-group mb-1">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Šifra:</span>
+                </div>
+
+                <input class="form-control" type="text" name="sifra" id="sifra" placeholder="Unesite šifru artikla" required>
+           </div>
+
+            <div class="input-group mb-1">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Naziv:</span>
+                </div>
+                <input class="form-control" type="text" name="naziv" id="naziv" placeholder="Unesite naziv artikla" required>
+            </div>
+
+            <div class="input-group mb-1">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Opis artikla:</span>
+                </div>
+                <textarea class="form-control" name="opis" id="opis" maxlength="200"
+                    placeholder="Maksimalno 200 karaktera..." required></textarea>
+            </div>
+            <hr>
+
+            <div class="input-group mb-1">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Kategorija artikla:</span>
+                    <select name="vrsta" id="vrsta">
+                        <option value="papir" selected>Papirna galanterija</option>
+                        <option value="maramice">Vlažne maramice</option>
+                        <option value="kozmetika">Kozmetika</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="input-group mb-1">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Cena</span>
+                </div>
+                <input class="form-control" type="number" id="cena" value="0" placeholder="Unesite cenu" required>
+            </div>
+            <hr>
+
+            <input id="datoteka" type="file" value="Sliku artikla"
+                placeholder="Izaberite sliku artikla" required>
+            <hr>
+
+            <div id="slika">
+                <img src="" alt="">
+            </div>
+            <hr>
+
+            <input id="sacuvaj" type="submit" class="btn btn-outline-info" value="Sačuvaj podatke" />
+
+        </form>
+        <!-- END of ARTIKLI-->
+    </div>
+
+    <!-- MODAL dialog box, umesto ALERT box-a -->
+
+    <!-- Poziva se sa:           $("#myModal").modal("show");
+             Ovako se dodaje naslov: $(".modal-title").html("neki naslov");
+             Ovako se dodaje poruka: $(".modal-body").html("neka poruka ili opis !"); 
+        -->
+
+
+    <!-- Modal -->
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+
+                <!-- Ovde se dodaje naslov MODAL prozora -->
+                <div class="modal-header">
+                    <p class="modal-title"></p>
+                </div>
+                <div class="modal-body">
+                    <!-- Ovde dodajemo tekst koji se pojavljuje-->
+                    <p></p>
+                </div>
+                <div class="modal-footer">
+                    <!-- Ovo je dugme za zatvaranje MODAL-a -->
+                    <button type="button" class="btn btn-outline-info" data-dismiss="modal">Zatvori</button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <!-- END of MODAL -->
+
+    <!-- Footer -->
+    <div class="footer container-fluid col-sm-">
+        <p>Dizajn: Zoran Spasić, 2019.</p>
+    </div>
+    <!--END of Footer-->
+
+    <script type="text/javascript" src="js/script.js"></script>
+
+</body>
+
+</html>
